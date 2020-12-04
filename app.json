@@ -1,0 +1,25 @@
+{
+  "name": "auth0-nuxt-springboot",
+  "description": "auth0-nuxt-springboot",
+  "env": {
+    "GRADLE_TASK": "herokuStage",
+    "SPRING_PROFILES_ACTIVE": "production"
+  },
+  "addons": [
+    {
+      "plan": "auth0"
+    },
+    {
+      "plan": "heroku-postgresql"
+    },
+    {
+      "plan": "papertrail"
+    }
+  ],
+  "stack": "heroku-20",
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ]
+}
